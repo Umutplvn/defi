@@ -11,7 +11,7 @@ const RouteBar = () => {
         width: "100%",
         justifyContent: "center",
         zIndex: 100,
-        marginTop: "2rem",
+        marginTop: "1rem",
       }}
     >
       <Box
