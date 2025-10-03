@@ -1,8 +1,11 @@
 import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const RouteBar = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -48,35 +51,44 @@ const RouteBar = () => {
           />
         </Box>
 
-        <Box sx={{ fontSize: "0.8rem", fontFamily: "'Poppins', sans-serif", cursor:"pointer",
-                        transition: "0.2s ease-in-out",
+        <Box
+          onClick={() => navigate("/register")}
+          sx={{
+            fontSize: "0.8rem",
+            fontFamily: "'Poppins', sans-serif",
+            cursor: "pointer",
+            transition: "0.2s ease-in-out",
 
-  ":hover": {
-      color:"#303030",
-    },    
-        }}>
+            ":hover": {
+              color: "#303030",
+            },
+          }}
+        >
           Get Started
         </Box>
 
-        <Box sx={{  width: "4rem",
-              backgroundColor: "#FAD009",
-              borderRadius:'1rem',
-              height:"1.8rem",
-              display:'flex',
-              justifyContent:'center',
-              alignItems:"center",
-              cursor:"pointer",
-                transition: "0.2s ease-in-out",
-   ":hover": {
-      backgroundColor: "black",
-      color:"white",
-    },             
-    
-    }}>
+        <Box
+          onClick={() => navigate("/login")}
+          sx={{
+            width: "4rem",
+            backgroundColor: "#FAD009",
+            borderRadius: "1rem",
+            height: "1.8rem",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            cursor: "pointer",
+            transition: "0.2s ease-in-out",
+            ":hover": {
+              backgroundColor: "black",
+              color: "white",
+            },
+          }}
+        >
           <Typography
             sx={{
               fontSize: "0.8rem",
-            
+
               fontFamily: "'Poppins', sans-serif",
               textAlign: "center",
             }}
