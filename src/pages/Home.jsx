@@ -13,7 +13,7 @@ const Home = () => {
           backgroundImage: `url(${homeBgOne})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          height: { xs: "100vh", md: "90vh" },
+          height: { xs: "100vh", sm: "70vh", md:"90vh" },
           margin: { xs: "0", md: "0.5rem" },
           borderRadius: { xs: "0", md: "2rem" },
           position: "relative",
