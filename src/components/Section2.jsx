@@ -1,38 +1,38 @@
-import { Box, Button, Typography } from '@mui/material'
-import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Box, Button, Typography } from "@mui/material";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Section2 = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <Box component="section">
-            {/* Bölüm 2 */}
-              <Box
-                sx={{
-                  height: "35vh",
-                  scrollSnapAlign: "start",
-                  display: "flex",
-                  flexDirection:'column',
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <Typography
-                component="h1"
-                  sx={{
-                    color: "black",
-                    fontFamily:"Poppins",
-                    fontSize: { xs: "1.5rem", md: "2.5rem" },
-                    maxWidth:"40rem", 
-                    width:"80%",
-                    textAlign:"center"
-                  }}
-                >
-                 Here is the place we turn your goals into reality.
-                </Typography>
-                      <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
+      {/* Bölüm 2 */}
+      <Box
+        sx={{
+          height: "35vh",
+          scrollSnapAlign: "start",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Typography
+          component="h1"
+          sx={{
+            color: "black",
+            fontFamily: "Poppins",
+            fontSize: { xs: "1.5rem", md: "2.5rem" },
+            maxWidth: "40rem",
+            width: "80%",
+            textAlign: "center",
+          }}
+        >
+          Here is the place we turn your goals into reality.
+        </Typography>
+        <Box sx={{ width: "100%", display: "flex", justifyContent: "center" }}>
           <Button
-          onClick={()=>navigate("/register")}
+            onClick={() => navigate("/register")}
             aria-label="Register to learn more details about our fitness coaching"
             sx={{
               backgroundColor: "#FAD009",
@@ -46,8 +46,8 @@ const Section2 = () => {
               cursor: "pointer",
               transition: "0.2s ease-in-out",
               marginTop: "2rem",
-              fontSize:"0.8rem",
-              fontWeight:"600",
+              fontSize: "0.8rem",
+              fontWeight: "600",
               ":hover": {
                 color: "white",
                 backgroundColor: "black",
@@ -57,9 +57,9 @@ const Section2 = () => {
             Get Started
           </Button>
         </Box>
-              </Box>
+      </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default Section2
+export default Section2;

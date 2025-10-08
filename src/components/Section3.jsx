@@ -6,15 +6,18 @@ const Section3 = () => {
   return (
     <Box
       sx={{
-        width: "100vw",
+        width: "100%",
         height: "100vh",
         display: "flex",
-        flexDirection: { xs: "column", lg: "row" },
+        alignItems: { xs: "center" },
+        gap: { xs: "3rem" },
+        flexDirection: { xs: "column", md: "row" },
+        padding: { xs: "1rem", md: "3rem" },
       }}
     >
       <Box
         sx={{
-          width: { lg: "50%", sm: "100%" },
+          width: { xs: "100%", sm: "75%", md: "50%" },
         }}
       >
         <Box
@@ -26,18 +29,39 @@ const Section3 = () => {
             width: "100%",
             maxWidth: "50rem",
             height: { xs: "50vh", sm: "30rem", md: "40rem" },
-            borderRadius: "1rem",
+            borderRadius: "2rem",
           }}
         >
-          <Typography color="white" variant="h3">
-            Another Section
-          </Typography>
+          <Box sx={{ padding: {xs:"1.2rem", md:"2rem"} }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: "1.3rem",
+                color: "#F3F3F1",
+                fontFamily: "Poppins",
+              }}
+            >
+              Move The Way You Enjoy{" "}
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontSize: "0.9rem",
+                color: "#F3F3F1",
+                fontFamily: "Poppins",
+                maxWidth: "25rem",
+                paddingTop: "0.5rem",
+              }}
+            >
+              This program adapts to you, keeping training fun and motivating.{" "}
+            </Typography>
+          </Box>
         </Box>
       </Box>
 
       <Box
         sx={{
-          width: { lg: "50%", sm: "100%" },
+          width: { xs: "100%", sm: "75%", md: "50%" },
         }}
       >
         <Box
@@ -47,20 +71,43 @@ const Section3 = () => {
             width: "100%",
             maxWidth: "50rem",
             height: { xs: "50vh", sm: "30rem", md: "40rem" },
-            borderRadius: "1rem",
+            borderRadius: "2rem",
           }}
         >
-          <Typography color="white" variant="h3">
-            Another Section
-          </Typography>
+          <Box sx={{ padding: "2rem" }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: "1.3rem",
+                color: "#000000",
+                fontFamily: "Poppins",
+              }}
+            >
+              Train the way you love
+            </Typography>
+            <Typography
+              color="black"
+              variant="h4"
+              sx={{
+                fontSize: "0.9rem",
+                color: "#000000",
+                fontFamily: "Poppins",
+                maxWidth: "25rem",
+                paddingTop: "0.5rem",
+              }}
+            >
+              This program adapts to what you like, keeping your training fun,
+              fresh, and motivating.
+            </Typography>
+          </Box>
           <Box
             sx={{
               width: "100%",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "100%",
-            }}
+              height: "100%"
+                        }}
           >
             <img
               src={detailOnePhoto2}
@@ -74,7 +121,6 @@ const Section3 = () => {
           </Box>
         </Box>
       </Box>
-
     </Box>
   );
 };
