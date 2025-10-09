@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import detailOnePhoto from "../assets/detailsPhoto.jpg";
 import detailOnePhoto2 from "../assets/detailsPhoto2.webp";
-
+import ImgOneBanner from "./ImgOneBanner";
 const Section3 = () => {
   return (
     <Box
@@ -30,9 +30,11 @@ const Section3 = () => {
             maxWidth: "50rem",
             height: { xs: "50vh", sm: "30rem", md: "40rem" },
             borderRadius: "2rem",
+            position:"relative",
+            overflow:"hidden"
           }}
         >
-          <Box sx={{ padding: {xs:"1.2rem", md:"2rem"} }}>
+          <Box sx={{ padding: { xs: "1.2rem", md: "2rem" } }}>
             <Typography
               variant="h3"
               sx={{
@@ -56,6 +58,7 @@ const Section3 = () => {
               This program adapts to you, keeping training fun and motivating.{" "}
             </Typography>
           </Box>
+          <ImgOneBanner />
         </Box>
       </Box>
 
@@ -106,8 +109,8 @@ const Section3 = () => {
               display: "flex",
               justifyContent: "center",
               height: "100%",
-              mt:{xs:"0",md:"2rem"}
-                        }}
+              mt: { xs: "0", md: "2rem" },
+            }}
           >
             <img
               src={detailOnePhoto2}

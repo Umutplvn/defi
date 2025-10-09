@@ -5,16 +5,24 @@ import { useNavigate } from "react-router-dom";
 const Section2 = () => {
   const navigate = useNavigate();
   return (
-    <Box component="section">
-      {/* Bölüm 2 */}
-      <Box
+    <Box 
+      component="section"
+      sx={{
+        height: "30vh",
+        paddingTop:{xs:"1rem", md:"5rem"}, 
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >      {/* Bölüm 2 */}
+    <Box
         sx={{
-          height: "35vh",
-          scrollSnapAlign: "start",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          width: "100%", 
         }}
       >
         <Typography

@@ -14,7 +14,7 @@ const Section1 = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         height: { xs: "100vh", sm: "70vh", md: "90vh" },
-        scrollSnapAlign: "start",
+        // scrollSnapAlign: "start",
         position: "relative",
         margin: { xs: "0", md: "0.5rem" },
         borderRadius: { xs: "0", md: "2rem" },

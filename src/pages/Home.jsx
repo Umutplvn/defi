@@ -8,11 +8,12 @@ const Home = () => {
   return (
     <Box
       sx={{
+        height: "100vh", 
         overflowY: "scroll",
-        scrollSnapType: "y mandatory",
+        scrollSnapType: "y mandatory", 
         scrollBehavior: "smooth",
-        maxWidth:"100rem",
-         margin:"auto"
+        maxWidth: "100rem",
+        margin: "auto",
       }}
     >
 <Section1/>
