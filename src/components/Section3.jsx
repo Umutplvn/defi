@@ -4,10 +4,13 @@ import detailOnePhoto2 from "../assets/detailsPhoto2.webp";
 import ImgOneBanner from "./ImgOneBanner";
 const Section3 = () => {
   return (
+    <Box sx={{display:'flex', flexDirection:'column', width:'100%', alignItems:"center", paddingBottom:"4rem"}}>
+
+    
     <Box
       sx={{
         width: "100%",
-        height: "100vh",
+        // height: "100vh",
         display: "flex",
         alignItems: { xs: "center" },
         gap: { xs: "3rem" },
@@ -30,8 +33,8 @@ const Section3 = () => {
             maxWidth: "50rem",
             height: { xs: "50vh", sm: "30rem", md: "40rem" },
             borderRadius: "2rem",
-            position:"relative",
-            overflow:"hidden"
+            position: "relative",
+            overflow: "hidden",
           }}
         >
           <Box sx={{ padding: { xs: "1.2rem", md: "2rem" } }}>
@@ -61,7 +64,6 @@ const Section3 = () => {
           <ImgOneBanner />
         </Box>
       </Box>
-
       <Box
         sx={{
           width: { xs: "100%", sm: "75%", md: "50%" },
@@ -86,7 +88,7 @@ const Section3 = () => {
                 fontFamily: "Poppins",
               }}
             >
-              Train the way you love
+              Train Whenever You Want
             </Typography>
             <Typography
               color="black"
@@ -99,8 +101,7 @@ const Section3 = () => {
                 paddingTop: "0.5rem",
               }}
             >
-              This program adapts to what you like, keeping your training fun,
-              fresh, and motivating.
+              Access programs anytime, anywhere. No personal trainer needed.
             </Typography>
           </Box>
           <Box
@@ -125,6 +126,54 @@ const Section3 = () => {
         </Box>
       </Box>
     </Box>
+
+    {/* Single Visual */}
+ 
+      <Box sx={{width:"100%", display:'flex', justifyContent:"center", padding:{xs:"1rem", md:"2rem 0"}}}>
+          <Box
+          component="section"
+          sx={{
+            backgroundImage: `url(${detailOnePhoto})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            width: "100%",
+            maxWidth: "50rem",
+            height: { xs: "50vh", sm: "30rem", md: "40rem" },
+            borderRadius: "2rem",
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <Box sx={{ padding: { xs: "1.2rem", md: "2rem" } }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontSize: "1.3rem",
+                color: "#F3F3F1",
+                fontFamily: "Poppins",
+              }}
+            >
+              Move The Way You Enjoy{" "}
+            </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontSize: "0.9rem",
+                color: "#F3F3F1",
+                fontFamily: "Poppins",
+                maxWidth: "25rem",
+                paddingTop: "0.5rem",
+              }}
+            >
+              This program adapts to you, keeping training fun and motivating.{" "}
+            </Typography>
+          </Box>
+
+
+        </Box>
+      </Box>
+
+      </Box>
   );
 };
 
