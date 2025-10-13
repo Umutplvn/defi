@@ -31,8 +31,7 @@ useEffect(() => {
         display: "flex",
         flexDirection: "column",
         width: "100%",
-        alignItems: "center",
-        paddingBottom: "4rem",
+        alignItems: "center"
       }}
     >
       <Box
@@ -156,7 +155,7 @@ useEffect(() => {
 
       {/* Single Visual */}
 
-   <Box sx={{width:"100%", height:"100vh", padding:{xs:"0 1rem", md:"0 3rem"}}} >
+   <Box sx={{width:"100%",   padding:{xs:"0", md:"0 3rem"}}} >
        <Box
         sx={{
           width: "100%",
@@ -165,10 +164,11 @@ useEffect(() => {
           flexDirection: "column",
           backgroundColor:'black',
           padding:"3rem 1rem",
-          borderRadius:"2rem"
+          borderRadius:{xs:"0", md:"2rem"},
+           height:"100vh"
         }}
       >
-<Box sx={{color:"white",  }}>
+<Box sx={{color:"white",   }}>
 
   <Typography component="h2"  sx={{fontSize:{xs:"1.5rem", md:"2.5rem"}, fontFamily:"Poppins", textAlign:"center"}}> Say hello to your </Typography>
 <Typography
@@ -193,8 +193,10 @@ useEffect(() => {
 
         <video
           width="100%"
+
           style={{
             maxWidth: "900px",
+           
           }}
           controls
         >
