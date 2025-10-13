@@ -41,7 +41,9 @@ export default function MembershipPlans() {
        gap: { lg: "5rem" },
      }}
    >
-     <Card
+    
+    <Box sx={{padding:"5rem", backgroundColor:'red'}}>
+ <Card
        size="lg"
        variant="outlined"
        sx={{ height: "30rem", width: "20rem" }}
@@ -86,7 +88,9 @@ export default function MembershipPlans() {
          </Button>
        </CardActions>
      </Card>
-
+      </Box>
+    
+    <Box sx={{padding:"5rem", backgroundColor:'red'}}>
      <Card
        variant="solid"
        color="neutral"
@@ -142,6 +146,8 @@ export default function MembershipPlans() {
          </Button>
        </CardActions>
      </Card>
+  
+  </Box>
    </Box>
  }
 </Box>

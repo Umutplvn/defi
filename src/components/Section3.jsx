@@ -6,24 +6,21 @@ import introVideo from "../assets/introVideo.mp4";
 import { useEffect, useState } from "react";
 
 const Section3 = () => {
+  const Arr = ["motivation buddy", "personal trainer", "fitness coach"];
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(false);
 
-  const Arr= ["motivation buddy", "personal trainer", "fitness coach"]
-  const [index, setIndex] = useState(0)
-const [fade, setFade] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(true);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % Arr.length);
+        setFade(false);
+      }, 500);
+    }, 3000);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setFade(true);
-    setTimeout(() => {
-      setIndex((prev) => (prev + 1) % Arr.length);
-      setFade(false);
-    }, 500); 
-  }, 3000);
-
-  return () => clearInterval(interval);
-}, []);
-  
-
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <Box
@@ -31,7 +28,7 @@ useEffect(() => {
         display: "flex",
         flexDirection: "column",
         width: "100%",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <Box
@@ -155,57 +152,86 @@ useEffect(() => {
 
       {/* Single Visual */}
 
-   <Box sx={{width:"100%",   padding:{xs:"0", md:"0 3rem"}}} >
-       <Box
-        sx={{
-          width: "100%",
-          display: "flex",
-          alignItems:  "center",
-          flexDirection: "column",
-          backgroundColor:'black',
-          padding:"3rem 1rem",
-          borderRadius:{xs:"0", md:"2rem"},
-           height:"100vh"
-        }}
-      >
-<Box sx={{color:"white",   }}>
-
-  <Typography component="h2"  sx={{fontSize:{xs:"1.5rem", md:"2.5rem"}, fontFamily:"Poppins", textAlign:"center"}}> Say hello to your </Typography>
-<Typography
-  component="h4"
-  sx={{
-    fontSize: { xs: "1rem", md: "1.8rem" },
-    fontFamily: "Poppins",
-    fontStyle: "italic",
-    textAlign: "center",
-    opacity: 1,
-    transition: "opacity 0.5s ease-in-out",
-    "&.fade-out": {
-      opacity: 0,
-    },
-  }}
-  className={fade ? "fade-out" : ""}
->
-  {Arr[index]}
-</Typography>
-
-</Box>
-
-        <video
-          width="100%"
-
-          style={{
-            maxWidth: "900px",
-           
+      <Box sx={{ width: "100%", padding: { xs: "0", md: "0 3rem" } }}>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+            backgroundColor: "black",
+            padding: "4rem 1rem",
+            borderRadius: { xs: "0", md: "2rem" },
+        height: { xs: "100vh", sm: "70vh", md: "90vh" },
+            gap:"2rem",
+            justifyContent:'center'
           }}
-          controls
         >
-          <source src={introVideo} type="video/mp4" />
-          Tarayıcınız video etiketini desteklemiyor.
-        </video>
+          <Box sx={{ color: "white", marginBottom:"1rem" }}>
+            <Typography
+              component="h2"
+              sx={{
+                fontSize: { xs: "1.8rem", md: "2.5rem" },
+                fontFamily: "Poppins",
+                textAlign: "center",
+              }}
+            >
+              {" "}
+              Say hello to your{" "}
+            </Typography>
+            <Typography
+              component="h4"
+              sx={{
+                fontSize: { xs: "1.5rem", md: "1.8rem" },
+                fontFamily: "Poppins",
+                fontStyle: "italic",
+                textAlign: "center",
+                opacity: 1,
+                transition: "opacity 0.5s ease-in-out",
+                "&.fade-out": {
+                  opacity: 0,
+                },
+              }}
+              className={fade ? "fade-out" : ""}
+            >
+              {Arr[index]}
+            </Typography>
+          </Box>
 
+          <Box
+            sx={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <video
+              width="100%"
+              style={{
+                maxWidth: "900px",
+              }}
+              controls
+            >
+              <source src={introVideo} type="video/mp4" />
+              Tarayıcınız video etiketini desteklemiyor.
+            </video>
+            <Typography
+              sx={{
+                color: "#c1c1c1",
+                textAlign: "center",
+                fontFamily: "Poppins",
+                fontSize: { xs: "0.8rem", md: "1rem" },
+                paddingTop: "2rem",
+              }}
+            >
+              {" "}
+              Actions are the seed of fate deeds grow into destiny.{" "}
+            </Typography>
+          </Box>
+        </Box>
       </Box>
-   </Box>
     </Box>
   );
 };

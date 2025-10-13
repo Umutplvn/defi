@@ -30,7 +30,7 @@ const Section4 = () => {
        
       }}
     >
-<Box sx={{width:"100%", height:"100vh", border:"1px solid black", borderRadius:"2rem", justifyContent:'center', alignItems:'center', display:"flex", flexDirection:'column'}}>
+<Box sx={{width:"100%", height:"100vh", backgroundColor:"#d9d9d9", borderRadius:"2rem", justifyContent:'center', alignItems:'center', display:"flex", flexDirection:'column'}}>
 
 <MembershipPlans/>
 {/* <MembbershipsSizeXs/> */}
