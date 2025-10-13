@@ -152,7 +152,7 @@ const Section3 = () => {
 
       {/* Single Visual */}
 
-      <Box sx={{ width: "100%", padding: { xs: "0", md: "0 3rem" } }}>
+      <Box sx={{ width: "100%", padding: { xs: "0", md: "3rem 3rem" } }}>
         <Box
           sx={{
             width: "100%",
@@ -205,6 +205,7 @@ const Section3 = () => {
               justifyContent: "center",
               alignItems: "center",
               flexDirection: "column",
+              
             }}
           >
             <video

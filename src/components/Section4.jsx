@@ -25,17 +25,19 @@ const Section4 = () => {
         flexDirection: "column",
         width: "100%",
         alignItems: "center",
-        padding:{xs:"1rem", md:"3rem"},
-        
+        height: { xs: "100vh", sm: "70vh", md: "90vh" },
        
       }}
     >
-<Box sx={{width:"100%",         height: { xs: "100vh", sm: "70vh", md: "90vh" },
- backgroundColor:"#d9d9d9", borderRadius:"2rem", justifyContent:'center', alignItems:'center', display:"flex", flexDirection:'column'}}>
-
-<MembershipPlans/>
-{/* <MembbershipsSizeXs/> */}
-    
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        width: "100%",
+        alignItems: "center",
+      }}
+    >
+<MembershipPlans/>    
     </Box>
       
 
